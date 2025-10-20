@@ -24,6 +24,25 @@ namespace BCSRecTests
 			int result = getArea(&length, &width);
 			Assert::AreEqual(50, result);
 		}
+		TEST_METHOD(TestSetLength_ValidInput)
+		{
+			int length = 0;
+			setLength(35, &length);
+			Assert::AreEqual(35, length);
+		}
+		TEST_METHOD(TestSetLength_MinBoundary)
+		{
+			int length = 0;
+			setLength(1, &length);
+			Assert::AreEqual(1, length);
+		}
+		TEST_METHOD(TestSetLength_MaxBoundary)
+		{
+			int length = 0;
+			setLength(99, &length);
+			Assert::AreEqual(99, length);
+		}
+
 
 	};
 }
