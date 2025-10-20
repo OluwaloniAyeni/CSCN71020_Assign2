@@ -1,3 +1,4 @@
+//initial commit after cloning professor's repo
 #pragma once
 void setLength(int input, int *length);
 void setWidth(int input, int *width);
