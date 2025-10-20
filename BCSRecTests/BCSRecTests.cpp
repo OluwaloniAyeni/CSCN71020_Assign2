@@ -42,6 +42,24 @@ namespace BCSRecTests
 			setLength(99, &length);
 			Assert::AreEqual(99, length);
 		}
+		TEST_METHOD(TestSetWidth_ValidInput)
+		{
+			int width = 0;
+			setWidth(40, &width);
+			Assert::AreEqual(40, width);
+		}
+		TEST_METHOD(TestSetWidth_MinBoundary)
+		{
+			int width = 0;
+			setWidth(1, &width);
+			Assert::AreEqual(1, width);
+		}
+		TEST_METHOD(TestSetWidth_MaxBoundary)
+		{
+			int width = 0;
+			setWidth(99, &width);
+			Assert::AreEqual(99, width);
+		}
 
 
 	};
